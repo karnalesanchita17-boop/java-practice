@@ -1,28 +1,28 @@
-public class Calculator{
-    public static int add(int a,b){
-        return a+b;
-    }
-    public static int sub(int a,b){
-        return a-b;
-    }
-    public static int mult(int a,b){
-        return a*b;
-    }
-    public static double divide(int a,b){
-        return a\b;
-        
-    }
-    public static void main(Strings[] args){
-        int x=10;
-        int y=5;
-        int sum=add(x,y);
-        int difference=sub(x,y);
-        int multiplication=mult(x,y);
-        double quotient=divide(x,y);
-        System.out.println("addition"+sum);
-        System.out.pirntln("Substraction"+difference);
-        System.out.println("Product"+multiplication);
-        System.out.println("Division"+quotient);
+public class Calculator {
 
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public static double divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
+        return (double) a / b;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Add: " + add(10, 5));
+        System.out.println("Subtract: " + subtract(10, 5));
+        System.out.println("Multiply: " + multiply(10, 5));
+        System.out.println("Divide: " + divide(10, 5));
     }
 }
